@@ -1,0 +1,12 @@
+{% extends 'base_generic.html' %}
+{% block content %}
+<h1>Respuestas</h1>
+<ul>
+    {% for choice in object_list %}
+        <li><a href="{% url 'detalle-respuesta' choice.id %}">{{ choice.question }} - {{ choice }}</a></li>
+    {% empty %}
+        <li>Todavía no respondes ninguna pregunta.</li>
+    {% endfor %}
+    </ul>
+    <a href="{% url 'agregar-respuesta' %}">Agregar Respuesta</a>
+{% endblock %}
