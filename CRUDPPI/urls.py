@@ -16,8 +16,6 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-#TODO: Verificar si se puede cambiar el nombre de la ruta de accounts a cuentas (agregar LOGIN_URL en settings)
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('preguntas.urls'), name='index'),

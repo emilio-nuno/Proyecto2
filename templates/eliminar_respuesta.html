@@ -1,8 +1,9 @@
 {% extends 'base_generic.html' %}
+{% load crispy_forms_tags %}
 {% block content %}
 <form method="post">{% csrf_token %}
     <p>Estás seguro que quieres eliminar "{{ object }}"?</p>
-    {{ form }}
-    <input type="submit" value="Confirm">
+    {{ form|crispy }}
+    <button type="submit" class="btn btn-danger">Eliminar Para Siempre</button>
 </form>
 {% endblock %}
