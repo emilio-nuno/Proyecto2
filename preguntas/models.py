@@ -24,4 +24,4 @@ class Choice(models.Model):
         return self.choice_text
 
     def get_absolute_url(self):
-        return reverse('detalle-respuesta', args=[str(self.id)])
+        return reverse('detalle-respuesta', kwargs={'pk': self.id})
